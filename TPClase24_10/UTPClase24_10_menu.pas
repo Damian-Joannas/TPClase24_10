@@ -3,7 +3,7 @@ Unit UTPClase24_10_menu;
 
 Interface
 
-Uses crt, UTPClase24_10_definion, UTPClase24_10_cargar_matriz, UTPClase24_10_util;
+Uses crt, UTPClase24_10_definion, UTPClase24_10_cargar_matriz, UTPClase24_10_util, UTPClase24_10_guardar_pila;
 Procedure procmenu();
 
 {----------------------------------------------------------------------}
@@ -27,7 +27,7 @@ Begin
     ClrScr;
     Case option Of 
       1: proccargar_matriz(matriz);
-      2: ;
+      2: procgympila(matriz,pila);
       3: //end
     End;
   Until option=3;

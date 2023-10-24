@@ -4,6 +4,7 @@ Unit UTPClase24_10_guardar_pila;
 Interface
 
 Uses crt, UTPClase24_10_definion, UTPClase24_10_procpila;
+Procedure procgympila(matriz:t_matriz; Var pila:t_pila);
 {-------------------------------------------------------------------------}
 
 Implementation
@@ -32,5 +33,15 @@ Begin
     DESAPILAR(pila,aux);
   Write('el departamento ',i,'tiene q pagar ', aux:0:3);
 End;
+
+{-------------------------------------------------------------------------}
+Procedure procgympila(matriz:t_matriz; Var pila:t_pila);
+
+Begin
+  proccargar_elem(matriz,pila);
+  procmostrar_pila(pila);
+End;
+
+{-------------------------------------------------------------------------}
 
 End.

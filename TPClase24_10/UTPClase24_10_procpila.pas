@@ -3,7 +3,7 @@ Unit UTPClase24_10_procpila;
 
 Interface
 
-Uses crt;
+Uses crt, UTPClase24_10_definion;
 
 Procedure CREARPILA(Var P:T_PILA);
 Procedure APILAR (Var P:T_PILA; X:T_DATO);
@@ -22,7 +22,7 @@ Begin
 End;
 
 {----------------------------------------------------------------------}
-Procedure APILAR (Var P:T_PILA; X:T_DATO);
+Procedure APILAR (Var P:T_PILA; X:Real);
 
 Begin
   P.TOPE := P.TOPE+1;
@@ -43,7 +43,7 @@ Begin
 End;
 
 {----------------------------------------------------------------------}
-Procedure DESAPILAR (Var P:T_PILA;Var X:T_DATO);
+Procedure DESAPILAR (Var P:T_PILA;Var X:Real);
 
 Begin
   X := P.ELEM[P.TOPE];
