@@ -6,10 +6,10 @@ Interface
 Uses crt, UTPClase24_10_definion;
 
 Procedure CREARPILA(Var P:T_PILA);
-Procedure APILAR (Var P:T_PILA; X:T_DATO);
+Procedure APILAR (Var P:T_PILA; X:t_dato_pila);
 Function PILA_LLENA (Var P:T_PILA): BOOLEAN;
 Function PILA_VACIA (Var P:T_PILA): BOOLEAN;
-Procedure DESAPILAR (Var P:T_PILA; Var X:T_DATO);
+Procedure DESAPILAR (Var P:T_PILA; Var X:t_dato_pila);
 {----------------------------------------------------------------------}
 
 Implementation
@@ -22,7 +22,7 @@ Begin
 End;
 
 {----------------------------------------------------------------------}
-Procedure APILAR (Var P:T_PILA; X:Real);
+Procedure APILAR (Var P:T_PILA; X:t_dato_pila);
 
 Begin
   P.TOPE := P.TOPE+1;
@@ -43,7 +43,7 @@ Begin
 End;
 
 {----------------------------------------------------------------------}
-Procedure DESAPILAR (Var P:T_PILA;Var X:Real);
+Procedure DESAPILAR (Var P:T_PILA;Var X:t_dato_pila);
 
 Begin
   X := P.ELEM[P.TOPE];

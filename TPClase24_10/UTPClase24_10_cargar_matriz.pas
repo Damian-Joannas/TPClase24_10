@@ -17,7 +17,7 @@ Begin
   For i:=1 To fil Do
     For j:=1 To col Do
       Begin
-        WriteLn('Ingresar los siguiente datos del departamento ',((i-1)*10+j),':');
+        WriteLn('Ingresar los siguiente datos del departamento ',((i-1)*Col+j),':');
         Write('Ingrese los gastos de electricidad: ');
         readLn(matriz[i,j].electricidad);
         Write('Ingrese los gastos de gas: ');

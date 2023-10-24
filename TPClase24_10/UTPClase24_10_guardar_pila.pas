@@ -3,7 +3,7 @@ Unit UTPClase24_10_guardar_pila;
 
 Interface
 
-Uses crt, UTPClase24_10_definion, UTPClase24_10_procpila;
+Uses crt, UTPClase24_10_definion, UTPClase24_10_procpila, UTPClase24_10_util;
 Procedure procgympila(matriz:t_matriz; Var pila:t_pila);
 {-------------------------------------------------------------------------}
 
@@ -30,8 +30,10 @@ Var
   aux: Real;
 Begin
   For i:=(fil*Col) Downto 1 Do
-    DESAPILAR(pila,aux);
-  Write('el departamento ',i,'tiene q pagar ', aux:0:3);
+    Begin
+      DESAPILAR(pila,aux);
+      WriteLn('el departamento ',i,' tiene q pagar ', aux:0:2);
+    End;
 End;
 
 {-------------------------------------------------------------------------}
@@ -40,6 +42,7 @@ Procedure procgympila(matriz:t_matriz; Var pila:t_pila);
 Begin
   proccargar_elem(matriz,pila);
   procmostrar_pila(pila);
+  procpulsartecla;
 End;
 
 {-------------------------------------------------------------------------}
