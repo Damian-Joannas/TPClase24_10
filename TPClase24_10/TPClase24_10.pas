@@ -1,7 +1,7 @@
 
 Program TPClase24_10;
 
-Uses crt;
+Uses crt, UTPClase24_10_menu;
 
 Begin
   procmenu;
